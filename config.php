@@ -12,6 +12,6 @@ $tilerows = array(0 => array('col-md-4','example1','XX','XX'),
 
 // this matches the row defined above and places the interim before that, if the row is not found it is put at the bottom					
 $interimsort = array('0' => "head",
-				'2' => "interim_1");
+				'3' => "interims_1");
 
 ?>
