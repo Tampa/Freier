@@ -231,6 +231,14 @@ pre {
 
 	background-color: #f14603;
 }
+.icon.style2.fa-envelope-o {
+
+	background-color: #85bb40;
+}
+.icon.style2.fa-youtube-play {
+
+	background-color: #f00;
+}
 
 .right-color {
 
@@ -464,6 +472,8 @@ button[disabled], html input[disabled] {
 }
 
 
+
+
 /* Menu */
 
 	.wrapper {
@@ -687,12 +697,7 @@ button[disabled], html input[disabled] {
 }
 
 .a a img.img-responsive {
-	opacity: 0.5;
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+	opacity: 1.0;
 }
 .a a:hover img.img-responsive{
 	opacity: 1;
