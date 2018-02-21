@@ -7,43 +7,38 @@ var j = document.getElementsByClassName("inner");
 var k = document.getElementsByTagName("hr");
 var l = document.getElementById("button");
 
-var color1;
-var color2;
-var color3;
-var color4;
-var color5;
 
-if (t.childNodes[0].innerHTML == "Dark Theme")
+if (theswitch == true)
 {
-    t.childNodes[0].innerHTML = "Bright Theme";
-	color1 = "#333";
-	color2 = "black";
-	color3 = "#222";
-	color4 = "#d2d2d2";
-	color5 = "#f5f5f5";
+	theswitch = false;
+    document.getElementById("button").innerHTML = n_bright;
+	color1 = d_color1;
+	color2 = d_color2;
+	color3 = d_color3;
+	color4 = d_color4;
     document.body.style.backgroundColor = color1;
-	document.body.style.color = color4;
-	document.getElementById("button").style.backgroundColor = color5;
+	document.body.style.color = color3;
+	document.getElementById("button").style.backgroundColor = color3;
 }
 else
 {
-    t.childNodes[0].innerHTML = "Dark Theme";
-	color1 = "#f5f5f5";
-	color2 = "#e3e3e3"
-	color3 = "#f5f5f5";
-	color4 = "#333";
-	color5 = "#333";
+	theswitch = true;
+    document.getElementById("button").innerHTML = n_dark;
+	color1 = b_color1;
+	color2 = b_color2;
+	color3 = b_color3;
+	color4 = b_color4;
     document.body.style.backgroundColor = color1;
-	document.getElementById("button").style.backgroundColor = color5;
-	document.body.style.color = color4;
+	document.getElementById("button").style.backgroundColor = color3;
+	document.body.style.color = color3;
 }
 
 var i;
 l.style.color = color1;
 for (i = 0; i < x.length; i++)
 {
-	x[i].style.backgroundColor = color3;
-	x[i].style.borderColor = color2;
+	x[i].style.backgroundColor = color2;
+	x[i].style.borderColor = color4;
 }
 for (i = 0; i < y.length; i++)
 {

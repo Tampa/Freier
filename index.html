@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title><?php require ('config.php'); echo $pagetitle; ?></title>
+		<title><?php require('config.php'); echo $pagetitle; ?></title>
 
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,8 +15,33 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/badge.css">
 	</head>
+	<script>
+		var n_bright = '<?php echo $bright_theme[0]; ?>';
+		var n_dark = '<?php echo $dark_theme[0]; ?>';
+		var d_color1 = '<?php echo $dark_theme[1]; ?>';
+		var d_color2 = '<?php echo $dark_theme[2]; ?>';
+		var d_color3 = '<?php echo $dark_theme[3]; ?>';
+		var d_color4 = '<?php echo $dark_theme[4]; ?>';
+		var b_color1 = '<?php echo $bright_theme[1]; ?>';
+		var b_color2 = '<?php echo $bright_theme[2]; ?>';
+		var b_color3 = '<?php echo $bright_theme[3]; ?>';
+		var b_color4 = '<?php echo $bright_theme[4]; ?>';
+		var theswitch = true;
+	</script>
 
+	
 	<body>
+		<div class="row">
+			<nav class="navbar navbar-fixed-top">
+				<ul class="nav navbar-nav navbar-right">
+					<div onclick="toggle(this)">
+						<button id="button" class="btn" style="width:200px" href="#" >
+							<?php echo $dark_theme[0]; ?>
+						</button>
+					</div>
+				</ul>
+			</nav>
+		</div>
 		<!-- Wrapper -->
 		<?php 
 		
@@ -69,7 +94,9 @@
 						if (is_readable($dir."tile_".$tilerows[$i][$j].".html") == TRUE)
 						{
 							echo ('<div class="'.$tilerows[$i][0].'">');
-							echo file_get_contents($dir."tile_".$tilerows[$i][$j].".html");
+							$rawtile = file_get_contents($dir."tile_".$tilerows[$i][$j].".html");
+							$parse = str_replace("%%imgstyle%%", $imgstyle ,$rawtile);
+							echo $parse;
 							echo ('</div>');
 						}
 						else
@@ -117,7 +144,7 @@
 		
 
 	<!-- Scripts -->
-
+	
 		<script src="assets/js/jquery-3.1.0.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/jquery.magnific-popup.min.js"></script>
